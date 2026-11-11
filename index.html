@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">🎒 CampusConnect</a>
+    <span class="nav-label">LOST & FOUND PORTAL</span>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Lost something?<br><span>Let's find it.</span></h1>
+      <p>Help your fellow students reconnect with their belongings on campus.</p>
+    </section>
+
+    <!-- Controls Section: Search & Category Filters -->
+    <section class="controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search lost or found items...">
+      </div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="lost">Lost Items</button>
+        <button class="filter-btn" data-filter="found">Found Items</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+        <button class="filter-btn" data-filter="keys">Keys & Cards</button>
+        <button class="filter-btn" data-filter="clothing">Clothing</button>
+      </div>
+    </section>
+
+    <!-- Report New Item Form -->
+    <section class="form-section">
+      <h2>Report an Item</h2>
+      <form id="reportForm">
+        <div class="form-group">
+          <label for="itemTitle">Item Title</label>
+          <input type="text" id="itemTitle" placeholder="e.g., Blue Water Bottle" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="itemStatus">Status</label>
+            <select id="itemStatus" required>
+              <option value="lost">Lost</option>
+              <option value="found">Found</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="itemCategory">Category</label>
+            <select id="itemCategory" required>
+              <option value="electronics">Electronics</option>
+              <option value="keys">Keys & Cards</option>
+              <option value="clothing">Clothing</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="itemLocation">Location (Where lost or found?)</label>
+          <input type="text" id="itemLocation" placeholder="e.g., Main Library - 2nd Floor" required>
+        </div>
+
+        <div class="form-group">
+          <label for="itemContact">Contact Info</label>
+          <input type="text" id="itemContact" placeholder="e.g., student@university.edu" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Post Report</button>
+      </form>
+    </section>
+
+    <!-- Items Grid Section -->
+    <section class="items-section">
+      <h2>Recent Reports</h2>
+      <div id="itemsGrid" class="items-grid">
+        <!-- Dynamically rendered items will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
